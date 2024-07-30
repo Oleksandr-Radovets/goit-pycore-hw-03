@@ -29,7 +29,6 @@ def get_numbers_ticket(min, max, quantity):
     except:
         print(TypeError("Only integers are allowed"))
 
-
 raw_numbers = [
     "067\\t123 4567",
     "(095) 234-5467\\n",
@@ -41,7 +40,6 @@ raw_numbers = [
     "38050-111-22-22",
     "38050 111 22 11   ",
 ]
-
 
 def normalize_phone(phone_number):
     pettern1 = r"\D"
@@ -83,7 +81,7 @@ def get_upcoming_birthdays(users):
             lists.append({"name": parseUserName, "congratulation_date": dateHappyBirthday.isoformat().__str__()})
         else:
             lists.append({"name": parseUserName, "congratulation_date": dateHappyBirthday.isoformat().__str__()})
-    print(lists)
+    return lists
 
 users = [
     {"name": "John Doe", "birthday": "1985.01.23"},
